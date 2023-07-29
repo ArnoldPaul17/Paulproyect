@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Nav from './Componentes/Nav'
 import Footer from './Componentes/Footer'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className='contenedor'>
           <Nav />
-            {children}
+            <div className='imagen-contenedor'>
+              <Image src='/tesla.jpg' alt='auto' width={500} height={500} />
+              <div className='texto-contenedor'>
+                {children}
+              </div>
+            </div>
           <Footer />
         </div>     
       </body>

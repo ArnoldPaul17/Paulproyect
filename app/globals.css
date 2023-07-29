@@ -17,3 +17,14 @@ body {
   max-width: 1000px;
   margin: 20px auto;
 }
+
+.imagen-contenedor {
+  position: relative;
+}
+
+.texto-contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
