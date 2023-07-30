@@ -22,9 +22,17 @@ body {
   position: relative;
 }
 
+@keyframes example {
+  from {background-color: transparent;}
+  to {background-color: blue;}
+}
+
 .texto-contenedor {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation-name: example;
+  animation-duration: 4s;
+  background-color: transparent;
 }

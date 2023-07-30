@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Nav from './Componentes/Nav'
 import Footer from './Componentes/Footer'
 import Image from 'next/image'
+import mountains from '../public/tesla.jpg'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +24,16 @@ export default function RootLayout({
         <div className='contenedor'>
           <Nav />
             <div className='imagen-contenedor'>
-              <Image src='/tesla.jpg' alt='auto' width={500} height={500} />
+            <Image
+                alt="Mountains"
+                src={mountains}
+                placeholder="blur"
+                quality={100}
+                sizes="100vw"
+                style={{
+                  objectFit: 'cover',
+                  }}
+              />
               <div className='texto-contenedor'>
                 {children}
               </div>
